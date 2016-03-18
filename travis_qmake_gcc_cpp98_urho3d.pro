@@ -32,8 +32,9 @@ LIBS += \
 
 LIBS += \
     -lpthread \
-    -lSDL2 \ #Otherwise use -lSDL
+    -lSDL \
     -ldl \
     -lGL
 
-DEFINES += RIBI_USE_SDL_2
+#    -lSDL2 \ #Otherwise use -lSDL
+#DEFINES += RIBI_USE_SDL_2
