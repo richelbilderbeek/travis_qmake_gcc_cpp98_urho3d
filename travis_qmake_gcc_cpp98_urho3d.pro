@@ -1,9 +1,39 @@
-TEMPLATE = app
-CONFIG += console
-CONFIG -= app_bundle qt
+# g++-5
+QMAKE_CXX = g++-5
+QMAKE_LINK = g++-5
+QMAKE_CC = gcc-5
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
 
-SOURCES += main.cpp
+LIBS += \
+    -lpthread \
+    -lSDL2 \ #Otherwise use -lSDL
+    -ldl \
+    -lGL
 
-QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+SOURCES += \
+    mastercontrol.cpp \
+    inputmaster.cpp \
+    cameramaster.cpp
 
-LIBS += -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+HEADERS += \
+    mastercontrol.h \
+    inputmaster.h \
+    cameramaster.h
+
+QMAKE_CXXFLAGS += -Wno-unused-variable
+
+# Urho3D
+INCLUDEPATH += \
+    ../travis_qmake_gcc_cpp98_urho3d/Urho3D/include \
+    ../travis_qmake_gcc_cpp98_urho3d/Urho3D/include/Urho3D/ThirdParty
+
+LIBS += \
+    ../travis_qmake_gcc_cpp98_urho3d/Urho3D/lib/libUrho3D.a
+
+LIBS += \
+    -lpthread \
+    -lSDL2 \ #Otherwise use -lSDL
+    -ldl \
+    -lGL
+
+DEFINES += RIBI_USE_SDL_2

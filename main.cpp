@@ -1,7 +1,24 @@
-#include <SFML/Graphics.hpp>
+#include <cassert>
+#include <iostream>
+#include <fstream>
+#include <stdexcept>
+#include "simulation.h"
+#include "nrrand.h"
+#include "tree.h"
 
-int main()
+int main(int argc, char **)
 {
-  ::sf::RectangleShape shape(::sf::Vector2f(100.0,250.0));
-  if (shape.getSize().x < 50) return 1;
+  try
+  {
+    Simulation simulation(
+      argc == 1 ? Rng::Type::rosindell : Rng::Type::bilderbeek
+    );
+  }
+  catch (std::runtime_error& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
+  #ifndef NDEBUG
+  std::cout << "Done (debug)" << std::endl;
+  #endif
 }
