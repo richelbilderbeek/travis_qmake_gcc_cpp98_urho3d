@@ -1,0 +1,16 @@
+language: cpp
+compiler: gcc
+sudo: true
+
+before_install:
+  - sudo apt-add-repository ppa:sonkun/sfml-development -y
+  - sudo apt-get update -qq
+
+install: 
+  - sudo apt-get install apt-show-versions
+  - sudo apt-get install libsfm-dev
+
+script: 
+ - ./build.sh
+ - ls
+ - apt-show-versions libsfml-dev

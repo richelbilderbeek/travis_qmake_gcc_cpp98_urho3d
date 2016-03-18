@@ -1,11 +1,38 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-# Other files and folders
-.settings/
+# Precompiled Headers
+*.gch
+*.pch
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.gcda
+Makefile
+*.gcov
+*.gcda
+*.gcno
+*qmake_gcov
+*.pro.user
+travis_qmake_gcc_cpp98_gcov
+travis_qmake_gcc_cpp98
+travis_qmake_gcc_cpp98_sfml
