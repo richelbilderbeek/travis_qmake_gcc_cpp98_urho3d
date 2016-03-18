@@ -4,12 +4,6 @@ QMAKE_LINK = g++-5
 QMAKE_CC = gcc-5
 QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
 
-LIBS += \
-    -lpthread \
-    -lSDL2 \ #Otherwise use -lSDL
-    -ldl \
-    -lGL
-
 SOURCES += \
     mastercontrol.cpp \
     inputmaster.cpp \
