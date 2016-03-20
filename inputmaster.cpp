@@ -19,7 +19,7 @@ InputMaster::InputMaster(
   MasterControl * const masterControl
 )
   : Object(context),
-    masterControl_{masterControl}
+    masterControl_(masterControl)
 {
   SubscribeToEvent(E_MOUSEBUTTONDOWN, HANDLER(InputMaster, HandleMouseDown));
   SubscribeToEvent(E_KEYDOWN, HANDLER(InputMaster, HandleKeyDown));
@@ -56,11 +56,11 @@ void InputMaster::HandleKeyDown(
   //Take screenshot
   if (key == KEY_9)
   {
-    Graphics * const graphics{GetSubsystem<Graphics>()};
+    Graphics * const graphics = GetSubsystem<Graphics>();
     Image screenshot(context_);
     graphics->TakeScreenShot(screenshot);
     //Here we save in the Data folder with date and time appended
-    const String fileName{"screenshot.png"};
+    const String fileName("screenshot.png");
     //Log::Write(1, fileName);
     screenshot.SavePNG(fileName);
   }

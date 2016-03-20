@@ -39,11 +39,11 @@ private:
     SharedPtr<Node> rotationNode_;
 
     SharedPtr<RigidBody> rigidBody_;
-    double yaw_ = 0.0;
-    double pitch_ = 0.0;
+    double yaw_;
+    double pitch_;
     //double roll_ = 0.0;
-    double yawDelta_ = 0.0;
-    double pitchDelta_ = 0.0;
-    double forceMultiplier = 1.0;
+    double yawDelta_;
+    double pitchDelta_;
+    double forceMultiplier;
     void SetupViewport();
 };

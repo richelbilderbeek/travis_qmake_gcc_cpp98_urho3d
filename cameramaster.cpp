@@ -50,7 +50,13 @@ CameraMaster::CameraMaster(
   MasterControl *masterControl
 ) :
     Object(context),
-    masterControl_{masterControl}
+    masterControl_(masterControl),
+    yaw_(0.0),
+    pitch_(0.0),
+    yawDelta_(0.0),
+    pitchDelta_(0.0),
+    forceMultiplier(1.0)
+
 {
   SubscribeToEvent(E_SCENEUPDATE, HANDLER(CameraMaster, HandleSceneUpdate));
 
