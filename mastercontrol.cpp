@@ -73,7 +73,7 @@ void MasterControl::Setup()
 {
   // Modify engine startup parameters.
   //Set custom window title and icon.
-  engineParameters_["WindowTitle"] = "RosindellEtAl2008";
+  engineParameters_["WindowTitle"] = "travis_qmake_gcc_cpp98_urho3d";
   engineParameters_["LogName"] = GetSubsystem<FileSystem>()->GetAppPreferencesDir("urho3d", "logs")+"RosindellEtAl2008.log";
   engineParameters_["FullScreen"] = false;
   engineParameters_["Headless"] = false;
