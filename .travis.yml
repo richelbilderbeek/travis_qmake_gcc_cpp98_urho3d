@@ -21,8 +21,8 @@ addons:
     - g++-5
     - libboost1.55-all-dev
 
+before_script:
+  - ./build_urho3d.sh 
+
 script: 
- - ./build.sh
-
-
-# - sudo apt-get install libboost-all-dev
+  - ./build.sh
