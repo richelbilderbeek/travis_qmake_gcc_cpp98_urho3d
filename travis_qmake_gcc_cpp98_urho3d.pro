@@ -9,10 +9,10 @@ HEADERS += \
     cameramaster.h
 
 # C++98
-QMAKE_CXX = g++-5
-QMAKE_LINK = g++-5
-QMAKE_CC = gcc-5
-QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+#QMAKE_CXX = g++-5
+#QMAKE_LINK = g++-5
+#QMAKE_CC = gcc-5
+#QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 
 # Qt resources emit a warning
 QMAKE_CXXFLAGS += -Wno-unused-variable
