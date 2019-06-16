@@ -1,7 +1,6 @@
 language: cpp
 dist: xenial
 compiler: gcc
-cache: packages
 
 addons: 
   apt: 
