@@ -7,6 +7,7 @@ addons:
     packages: 
       - libboost-all-dev
 
+
 install:
   - sudo apt-get install libx11-dev libxrandr-dev libasound2-dev libgl1-mesa-dev
   - sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
@@ -18,11 +19,11 @@ install:
   - sudo npm install -g markdown-link-check
 
 script: 
- - ./install_urho3d
- - ln -s ../Urho3D/bin/Data
- - ln -s ../Urho3D/bin/CoreData
- - qmake -qt=qt5 travis_qmake_gcc_cpp98_urho3d.pro
- - make --silent
+  - ./install_urho3d
+  - ln -s ../Urho3D/bin/Data
+  - ln -s ../Urho3D/bin/CoreData
+  - qmake -qt=qt5 travis_qmake_gcc_cpp98_urho3d.pro
+  - make --silent
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links
