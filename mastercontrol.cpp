@@ -3,13 +3,6 @@
 
 #include <QFile>
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-#pragma GCC diagnostic ignored "-Wunused-variable"
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#define BT_INFINITY
-
 #include <Urho3D/Urho3D.h>
 
 #include <Urho3D/Audio/Sound.h>
@@ -45,25 +38,21 @@
 #include <Urho3D/UI/Font.h>
 #include <Urho3D/UI/Text.h>
 
-#pragma GCC diagnostic pop
-
 #include "mastercontrol.h"
 #include "cameramaster.h"
 #include "inputmaster.h"
 
-DEFINE_APPLICATION_MAIN(MasterControl);
+URHO3D_DEFINE_APPLICATION_MAIN(MasterControl);
 
 MasterControl::MasterControl(Context *context):
     Application(context)
 {
   {
-    const int error
-      = std::system("ln -s ../travis_qmake_gcc_cpp98_urho3d/Urho3D/bin/Data");
+    const int error{std::system("ln -s ../Urho3D/bin/Data")};
     if (error) {}
   }
   {
-    const int error
-      = std::system("ln -s ../travis_qmake_gcc_cpp98_urho3d/Urho3D/bin/CoreData");
+    const int error{std::system("ln -s ../Urho3D/bin/CoreData")};
     if (error) {}
   }
 }
@@ -73,7 +62,7 @@ void MasterControl::Setup()
 {
   // Modify engine startup parameters.
   //Set custom window title and icon.
-  engineParameters_["WindowTitle"] = "travis_qmake_gcc_cpp98_urho3d";
+  engineParameters_["WindowTitle"] = "travis_qmake_gcc_cpp11_urho3d";
   engineParameters_["LogName"] = GetSubsystem<FileSystem>()->GetAppPreferencesDir("urho3d", "logs")+"RosindellEtAl2008.log";
   engineParameters_["FullScreen"] = false;
   engineParameters_["Headless"] = false;

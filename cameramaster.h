@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mastercontrol.h"
+#include <Urho3D/Urho3D.h>
 
 namespace Urho3D {
   class Drawable;
@@ -17,7 +18,7 @@ using namespace Urho3D;
 
 class CameraMaster : public Object
 {
-    OBJECT(CameraMaster);
+    URHO3D_OBJECT(CameraMaster, Object);
     friend class MasterControl;
     friend class InputMaster;
 public:
@@ -39,11 +40,11 @@ private:
     SharedPtr<Node> rotationNode_;
 
     SharedPtr<RigidBody> rigidBody_;
-    double yaw_;
-    double pitch_;
+    double yaw_ = 0.0;
+    double pitch_ = 0.0;
     //double roll_ = 0.0;
-    double yawDelta_;
-    double pitchDelta_;
-    double forceMultiplier;
+    double yawDelta_ = 0.0;
+    double pitchDelta_ = 0.0;
+    double forceMultiplier = 1.0;
     void SetupViewport();
 };

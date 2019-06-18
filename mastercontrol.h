@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Urho3D/Urho3D.h>
+#include <Urho3D/Core/Object.h>
 #include <Urho3D/Container/HashMap.h>
 #include <Urho3D/Engine/Application.h>
 #include <Urho3D/Graphics/Viewport.h>
@@ -50,7 +51,7 @@ namespace {
 
 class MasterControl : public Application
 {
-    OBJECT(MasterControl);
+    URHO3D_OBJECT(MasterControl, Object);
     friend class InputMaster;
 
 public:
