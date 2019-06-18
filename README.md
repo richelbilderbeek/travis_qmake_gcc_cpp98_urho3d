@@ -1,6 +1,6 @@
 # travis_qmake_gcc_cpp98_urho3d
 
-[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
+[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d)
 
@@ -22,4 +22,4 @@ Less builds:
  * Use of STL only: [travis_qmake_gcc_cpp98](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98)
 
 
-![Screenshot of travis_qmake_gcc_cpp98_urho3d](travis_qmake_gcc_cpp98_urho3d.png)
+![Screenshot of travis_qmake_gcc_cpp98_urho3d](pics/travis_qmake_gcc_cpp98_urho3d.png)
