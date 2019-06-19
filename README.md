@@ -4,6 +4,10 @@
 
 [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d)
 
+```
+To build modern Urho3D one requires C++11
+```
+
 This GitHub is part of [the Travis C++ Tutorial](https://github.com/richelbilderbeek/travis_cpp_tutorial).
 
 The goal of this project is to have a clean Travis CI build, with specs:
