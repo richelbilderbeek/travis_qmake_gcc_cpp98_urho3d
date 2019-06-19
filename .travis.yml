@@ -19,11 +19,11 @@ install:
   - sudo npm install -g markdown-link-check
 
 script: 
-  - ./install_urho3d
-  - ln -s ../Urho3D/bin/Data
-  - ln -s ../Urho3D/bin/CoreData
-  - qmake -qt=qt5 travis_qmake_gcc_cpp98_urho3d.pro
-  - make --silent
+  - #./install_urho3d
+  - #ln -s ../Urho3D/bin/Data
+  - #ln -s ../Urho3D/bin/CoreData
+  - #qmake -qt=qt5 travis_qmake_gcc_cpp98_urho3d.pro
+  - #make --silent
   # Check dead links
   - rm .travis.yml
   - ./scripts/check_dead_links
